@@ -1,0 +1,31 @@
+@import "../../styles/sass/abstracts/variables";
+
+.btn {
+  border: 0;
+  background-color: $brainflix-blue;
+  padding: 10px 32px;
+  height: 40px;
+  min-width: 150px;
+  position: relative;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+  @include breakpoint(767px) {
+    width: 100%;
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    height: 20px;
+    transform: translateY(-50%);
+  }
+  &__text {
+    color: $white;
+    text-transform: uppercase;
+    padding-top: 7px;
+  }
+  &:hover {
+    background-color: $brainflix-darkblue;
+  }
+}

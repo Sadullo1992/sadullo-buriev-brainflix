@@ -1,0 +1,23 @@
+@import "../../styles/sass/abstracts/variables";
+
+.comment {
+  padding: 24px 24px 24px 16px;
+  border-top: 1px solid $mercury;
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  &__content {
+    width: calc(100% - 76px);
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    color: $brainflix-black;
+  }
+  &__time {
+    color: $silver;
+  }
+}

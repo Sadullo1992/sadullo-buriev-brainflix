@@ -1,0 +1,45 @@
+@import "../../styles/sass/abstracts/variables";
+
+.comments {
+  &__creation {
+    padding: 24px 24px 24px 16px;
+    display: flex;
+    align-items: flex-end;
+    column-gap: 32px;
+    &__form {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      column-gap: 24px;
+      width: calc(100% - 76px);
+      &__input__wrapper {
+        width: 100%;
+      }
+      label {
+        color: $silver;
+      }
+      input {
+        padding: 16px;
+        height: 40px;
+        width: 100%;
+        background-color: $alabaster;
+        border: 1px solid $mercury;
+        border-radius: 4px;
+        color: $brainflix-black;
+        outline: 0;
+        &::placeholder {
+          font-family: $font-family-400;
+          font-size: 14px;
+          line-height: 22px;
+          color: $brainflix-black;
+        }
+        &:focus {
+          outline: 2px solid $brainflix-blue;
+        }
+      }
+    }
+  }
+  &__title {
+    color: $brainflix-black;
+  }
+}

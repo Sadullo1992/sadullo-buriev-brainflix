@@ -1,0 +1,48 @@
+@import "../../styles/sass/abstracts/variables";
+
+.header {
+  padding: 24px 0;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    width: 120px;
+    height: 25px;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+    .btn {
+      margin-right: 24px;
+      @include breakpoint(1279px) {
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 16px 0;
+    &__inner {
+      flex-direction: column;
+      row-gap: 16px;
+    }
+    &__nav {
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 16px;
+      .btn {
+        order: 3;
+      }
+      form {
+        width: calc(100% - 56px);
+      }
+    }
+  }
+}
