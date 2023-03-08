@@ -21,6 +21,10 @@
     font-size: 14px;
     line-height: 22px;
     color: $brainflix-black;
+    @include breakpoint(767px) {
+      font-size: 13px;
+      line-height: 18px;
+    }
   }
   &:focus {
     outline: 2px solid $brainflix-blue;

@@ -4,4 +4,8 @@
   height: 40px;
   width: 40px;
   border-radius: 50%;
+  @include breakpoint(767px) {
+    height: 36px;
+    width: 36px;
+  }
 }

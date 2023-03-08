@@ -1,0 +1,29 @@
+@import "../../styles/sass/abstracts/variables";
+
+.next-video {
+  display: flex;
+  gap: 24px;
+  cursor: pointer;
+  @include breakpoint(767px) {
+    gap: 16px;
+  }
+  &__photo {
+    height: 72px;
+    width: 112px;
+    border-radius: 4px;
+    @include breakpoint(767px) {
+      flex-shrink: 0;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 184px;
+    width: 100%;
+  }
+  &__title,
+  &__channel {
+    color: $brainflix-black;
+  }
+}

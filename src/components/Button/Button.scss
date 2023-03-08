@@ -19,6 +19,9 @@
     left: 8px;
     height: 20px;
     transform: translateY(-50%);
+    @include breakpoint(767px) {
+      left: 12px;
+    }
   }
   &__text {
     color: $white;

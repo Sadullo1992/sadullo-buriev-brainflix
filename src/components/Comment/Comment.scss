@@ -6,6 +6,13 @@
   display: flex;
   align-items: flex-start;
   gap: 32px;
+  @include breakpoint(1279px) {
+    padding: 24px 0;
+  }
+  @include breakpoint(767px) {
+    padding: 16px 0;
+    gap: 16px;
+  }
   &__content {
     width: calc(100% - 76px);
   }

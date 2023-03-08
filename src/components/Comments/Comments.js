@@ -10,7 +10,7 @@ import avatarBg from "../../assets/images/Mohan-muruge.jpg";
 function Comments() {
   return (
     <div className="comments">
-      <h4 className="comments__title brainflix-section-title">3 Comments</h4>
+      <h4 className="comments__title brainflix-subtitle">3 Comments</h4>
       <div className="comments__creation">
         <Avatar src={avatarBg} />
         <form className="comments__creation__form">
@@ -19,11 +19,12 @@ function Comments() {
               JOIN THE CONVERSATION
             </label>
             <br />
-            <input
+            <textarea
+              name="add-comment"
               id="add-comment"
-              type="text"
               placeholder="Add a new comment"
-            />
+              className="brainflix-text"
+            ></textarea>
           </div>
           <Button src={add_commentIcon} text={"Comment"} />
         </form>

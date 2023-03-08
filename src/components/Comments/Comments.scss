@@ -6,20 +6,24 @@
     display: flex;
     align-items: flex-end;
     column-gap: 32px;
+    @include breakpoint(1279px) {
+      padding: 24px 0;
+    }
     &__form {
       display: flex;
       align-items: flex-end;
       justify-content: flex-end;
       column-gap: 24px;
-      width: calc(100% - 76px);
+      flex-grow: 1;
       &__input__wrapper {
         width: 100%;
       }
       label {
         color: $silver;
       }
-      input {
-        padding: 16px;
+      textarea {
+        display: block;
+        padding: 8px 16px;
         height: 40px;
         width: 100%;
         background-color: $alabaster;
@@ -27,11 +31,17 @@
         border-radius: 4px;
         color: $brainflix-black;
         outline: 0;
+        overflow: hidden;
+        resize: none;
         &::placeholder {
           font-family: $font-family-400;
           font-size: 14px;
           line-height: 22px;
           color: $brainflix-black;
+          @include breakpoint(767px) {
+            font-size: 13px;
+            line-height: 18px;
+          }
         }
         &:focus {
           outline: 2px solid $brainflix-blue;
@@ -41,5 +51,25 @@
   }
   &__title {
     color: $brainflix-black;
+  }
+}
+
+@media (max-width: 767px) {
+  .comments {
+    &__creation {
+      padding: 16px 0;
+      column-gap: 16px;
+      align-items: flex-start;
+      .avatar {
+        margin-top: 20px;
+      }
+      &__form {
+        flex-direction: column;
+        row-gap: 16px;
+        textarea {
+          height: 96px;
+        }
+      }
+    }
   }
 }

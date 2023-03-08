@@ -1,1 +1,8 @@
 @import "./styles/sass/abstracts/variables";
+
+.video-details {
+  display: flex;
+  @include breakpoint(1279px) {
+    display: block;
+  }
+}
