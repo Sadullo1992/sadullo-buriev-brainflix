@@ -14,7 +14,9 @@
   &__video {
     width: 100%;
     max-width: 1106px;
+    max-height: 617px;
     height: auto;
+    object-fit: fill;
 
     aspect-ratio: auto 16 / 9;
     @include breakpoint(1279px) {

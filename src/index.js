@@ -3,9 +3,13 @@ import ReactDOM from "react-dom/client";
 import "./styles/sass/main.scss";
 import App from "./App";
 
+import configureFakeBackend from "./helpers/fake-backend";
+
+configureFakeBackend();
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // <React.StrictMode>
+  <App />
+  // </React.StrictMode>
 );

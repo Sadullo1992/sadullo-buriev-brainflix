@@ -1,16 +1,13 @@
 import "./VideoPlayer.scss";
 
-function VideoPlayer() {
+function VideoPlayer({ activeVideo }) {
+  const { image, video } = activeVideo;
   return (
     <section className="video-player">
       <div className="container">
         <div className="video-player__inner">
-          <video
-            className="video-player__video"
-            controls
-            poster="https://i.imgur.com/l2Xfgpl.jpg"
-          >
-            <source src="" />
+          <video className="video-player__video" controls poster={image}>
+            <source src={video} />
           </video>
         </div>
       </div>
